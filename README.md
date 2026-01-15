@@ -1,4 +1,4 @@
-# Misteri Warisan Tuan Broto - Coding Challenge
+# Misteri Warisan Tuan Broto
 
 ## 🕵️‍♂️ Skenario
 Tuan Broto meninggal dunia secara mendadak pada pukul 23.40. Dokumen warisannya menjadi rebutan. Ada dua saksi kunci yang melihat isi dokumen tersebut sesaat setelah kematiannya, namun mereka melaporkan hal yang berbeda:
@@ -45,3 +45,4 @@ npm run dev
 Aplikasi berjalan di `http://localhost:5173`
 
 Selamat memecahkan misteri! 🧐
+
