@@ -1,47 +1,16 @@
-# Misteri Warisan Tuan Broto - Coding Challenge
+# React + Vite
 
-## 🕵️‍♂️ Skenario
-Tuan Broto meninggal dunia secara mendadak pada pukul 23.40. Dokumen warisannya menjadi rebutan. Ada dua saksi kunci yang melihat isi dokumen tersebut sesaat setelah kematiannya, namun mereka melaporkan hal yang berbeda:
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- **Saksi 1 (Pengacara):** Mengklaim dia menambahkan nama **"Budi"** ke dalam daftar ahli waris karena amanat lisan terakhir.
-- **Saksi 2 (Detektif):** Mengklaim dia mencoret nama **"Andi"** karena dicurigai memalsukan identitas, sehingga hanya menyisakan **"Maria"**.
+Currently, two official plugins are available:
 
-### Masalah Teknis
-Sistem pencatatan warisan saat ini mengalami masalah **Concurrency** dan **Race Condition**.
-Ketika Pengacara dan Detektif mencoba melakukan perubahan data secara hampir bersamaan, sistem gagal menangani keduanya dengan benar. Seringkali, salah satu perubahan hilang (Stale Data), atau data menjadi tidak konsisten.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🎯 Misi Anda
-Anda diminta untuk memperbaiki sistem backend agar dapat menangani perubahan data dari kedua saksi tersebut tanpa ada yang hilang, menjaga **Data Integrity**.
+## React Compiler
 
-1.  **Analisa Bug:** Jalankan simulasi untuk melihat bagaimana data menjadi kacau saat kedua saksi beraksi bersamaan.
-2.  **Perbaiki Backend:** Ubah logika di `server.js` untuk menangani concurrency. Anda bebas menggunakan teknik locking, antrian, versioning, atau struktur data yang lebih baik.
-3.  **Audit Trail:** Pastikan sistem mencatat "Sejarah Perubahan" sehingga jelas bahwa Andi pernah ada lalu dicoret, dan Budi ditambahkan.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🏆 Goals (The Secret Portal)
-Di halaman depan aplikasi, terdapat sebuah **"Secret Portal"** yang terkunci.
-Portal ini akan terbuka secara otomatis JIKA sistem mendeteksi integritas data terjaga:
-- **Maria** ada di dalam daftar.
-- **Budi** berhasil masuk ke daftar.
-- **Andi** tidak ada di daftar aktif (tapi sejarah pencoretannya diketahui).
+## Expanding the ESLint configuration
 
-Jika berhasil, Anda akan mendapatkan akses ke hadiah tersembunyi!
-
-## 🚀 Cara Menjalankan
-
-### Backend
-```bash
-cd backend
-npm install
-node server.js
-```
-Server berjalan di `http://localhost:3001`
-
-### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-Aplikasi berjalan di `http://localhost:5173`
-
-Selamat memecahkan misteri! 🧐
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
